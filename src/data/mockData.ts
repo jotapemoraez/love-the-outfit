@@ -1,4 +1,36 @@
-import { Category, Look } from '@/types';
+// Types
+export interface Category {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  type: 'aesthetic' | 'occasion';
+  value: string;
+}
+
+export interface Item {
+  id: string;
+  name: string;
+  brand: string;
+  price: number;
+  image: string;
+  affiliateLink: string;
+  category: string;
+}
+
+export interface Look {
+  id: string;
+  title: string;
+  description: string;
+  mainImage: string;
+  aesthetic: string;
+  occasion: string;
+  gender: string;
+  season: string;
+  featured?: boolean;
+  tags: string[];
+  items: Item[];
+}
 
 export const categories: Category[] = [
   // Aesthetic Categories
@@ -46,7 +78,7 @@ export const categories: Category[] = [
   },
   {
     id: 'work-business',
-    name: 'Work & Business',
+    name: 'Work &amp; Business',
     description: 'Professional and polished outfits',
     image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=400&fit=crop',
     type: 'occasion',
@@ -70,7 +102,7 @@ export const categories: Category[] = [
   },
   {
     id: 'gym-active',
-    name: 'Gym & Active',
+    name: 'Gym &amp; Active',
     description: 'Stylish activewear and athleisure',
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop',
     type: 'occasion',
