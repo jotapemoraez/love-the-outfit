@@ -1,86 +1,98 @@
 # Love the Outfit 💕
 
-Um app minimalista e aesthetic para curadoria de looks de moda com foco em links de afiliados.
+A minimalist and aesthetic app for fashion look curation focused on affiliate links.
+
+## 💡 Concept
+
+The idea behind **Love the Outfit** is to create daily curated fashion outfits with direct links to e-commerce platforms, generating revenue through affiliate commissions. Users can discover complete looks, see exactly what items they need, and purchase them with a single click.
+
+**Currently, all results are mocked data** - the app showcases the concept and design while we prepare integrations with real fashion APIs and affiliate networks.
+
+### 🎯 Business Model
+- **Daily Curation**: Fresh outfit inspiration every day
+- **Affiliate Revenue**: Earn commissions from fashion retailers
+- **User Experience**: Simple, fast, and mobile-optimized shopping
+- **Scalable**: Ready for multiple brands and categories
 
 ## ✨ Features
 
-### 🎨 Categorias de Estilo
+### 🎨 Style Categories
 - **Aesthetic**: Minimalist, Dark Academia, Cottagecore, Y2K
-- **Ocasião**: Casual, Work/Business, Date Night, Party, Gym/Active
-- **Gênero**: Masculine, Feminine, Unisex
-- **Estação**: Spring/Summer, Fall/Winter
+- **Occasion**: Casual, Work/Business, Date Night, Party, Gym/Active
+- **Gender**: Masculine, Feminine, Unisex
+- **Season**: Spring/Summer, Fall/Winter
 
-### 🌟 Funcionalidades
-- **Look of the Day**: Destaque diário na homepage
-- **Navegação por categorias**: Explore estilos por aesthetic, ocasião, etc.
-- **Páginas detalhadas de looks**: Visualize looks completos com preços
-- **Links de afiliados**: Monetização através de comissões
-- **Design responsivo**: Funciona perfeitamente em mobile e desktop
-- **API Routes**: Preparado para integrações externas
+### 🌟 Functionality
+- **Look of the Day**: Daily featured look on homepage
+- **Category navigation**: Explore styles by aesthetic, occasion, etc.
+- **Detailed look pages**: View complete looks with pricing
+- **Affiliate links**: Monetization through commissions
+- **Responsive design**: Works perfectly on mobile and desktop
+- **API Routes**: Ready for external integrations
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-- **Next.js 15** - Framework React com App Router
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Styling utilitário
-- **Next/Image** - Otimização de imagens
-- **Inter Font** - Tipografia moderna
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Static typing
+- **Tailwind CSS** - Utility-first styling
+- **Next/Image** - Image optimization
+- **Inter Font** - Modern typography
 
-## 📦 Instalação
+## 📦 Installation
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone <repository-url>
 cd love-the-outfit
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Execute o servidor de desenvolvimento
+# Run development server
 npm run dev
 ```
 
-Acesse `http://localhost:3000` para ver o app.
+Access `http://localhost:3000` to view the app.
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 src/
 ├── app/
 │   ├── api/                    # API Routes
-│   │   ├── looks/              # Endpoints de looks
-│   │   ├── categories/         # Endpoints de categorias
-│   │   └── affiliate/          # Tracking de afiliados
-│   ├── category/[id]/          # Páginas de categoria
-│   ├── look/[id]/              # Páginas de look individual
+│   │   ├── looks/              # Look endpoints
+│   │   ├── categories/         # Category endpoints
+│   │   └── affiliate/          # Affiliate tracking
+│   ├── category/[id]/          # Category pages
+│   ├── look/[id]/              # Individual look pages
 │   └── page.tsx                # Homepage
 ├── data/
-│   └── mockData.ts             # Dados mockados
+│   └── mockData.ts             # Mock data
 ├── types/
-│   └── index.ts                # Definições TypeScript
-└── components/                 # Componentes (futuro)
+│   └── index.ts                # TypeScript definitions
+└── components/                 # Components (future)
 ```
 
-## 🎯 Próximos Passos
+## 🎯 Next Steps
 
-### Integrações Planejadas
-- [ ] **APIs Externas**: Amazon, Zara, ASOS
-- [ ] **Sistema de Analytics**: Google Analytics, tracking de cliques
-- [ ] **CMS**: Sanity ou Strapi para gerenciar conteúdo
-- [ ] **Database**: PostgreSQL para persistir dados
-- [ ] **Authentication**: Para usuários salvarem favoritos
+### Planned Integrations
+- [ ] **External APIs**: Amazon, Zara, ASOS
+- [ ] **Analytics System**: Google Analytics, click tracking
+- [ ] **CMS**: Sanity or Strapi for content management
+- [ ] **Database**: PostgreSQL for data persistence
+- [ ] **Authentication**: For users to save favorites
 
-### Features Futuras
-- [ ] **Favoritos**: Sistema para salvar looks
-- [ ] **Filtros Avançados**: Por preço, cor, tamanho
-- [ ] **Search**: Busca por texto
-- [ ] **Recomendações**: ML para sugestões personalizadas
-- [ ] **Social Sharing**: Compartilhar looks nas redes sociais
+### Future Features
+- [ ] **Favorites**: System to save looks
+- [ ] **Advanced Filters**: By price, color, size
+- [ ] **Search**: Text-based search
+- [ ] **Recommendations**: ML for personalized suggestions
+- [ ] **Social Sharing**: Share looks on social media
 
 ## 🔗 API Endpoints
 
 ### GET `/api/looks`
-Busca looks com filtros opcionais:
+Search looks with optional filters:
 - `?aesthetic=minimalist`
 - `?occasion=casual`
 - `?gender=unisex`
@@ -88,11 +100,11 @@ Busca looks com filtros opcionais:
 - `?featured=true`
 
 ### GET `/api/categories`
-Lista categorias:
+List categories:
 - `?type=aesthetic` (aesthetic, occasion, gender, season)
 
 ### POST `/api/affiliate/click`
-Tracking de cliques em links de afiliados:
+Track affiliate link clicks:
 ```json
 {
   "itemId": "item-1",
@@ -104,39 +116,39 @@ Tracking de cliques em links de afiliados:
 
 ## 🎨 Design System
 
-### Cores
+### Colors
 - **Background**: `stone-50` (#fafaf9)
 - **Cards**: `white` (#ffffff)
 - **Text Primary**: `stone-900` (#1c1917)
 - **Text Secondary**: `stone-600` (#57534e)
 - **Accent**: `stone-100` (#f5f5f4)
 
-### Tipografia
+### Typography
 - **Font**: Inter (Google Fonts)
 - **Weights**: 300 (light), 400 (normal), 500 (medium), 600 (semibold)
 
-### Componentes
+### Components
 - **Border Radius**: `rounded-2xl` (16px)
-- **Shadows**: `shadow-sm` sutil
+- **Shadows**: `shadow-sm` subtle
 - **Transitions**: 300ms ease
-- **Hover Effects**: Scale e translate
+- **Hover Effects**: Scale and translate
 
-## 📱 Responsividade
+## 📱 Responsiveness
 
-- **Mobile First**: Design otimizado para mobile
+- **Mobile First**: Mobile-optimized design
 - **Breakpoints**: sm (640px), md (768px), lg (1024px), xl (1280px)
-- **Grid System**: CSS Grid responsivo
-- **Images**: Next/Image com lazy loading
+- **Grid System**: Responsive CSS Grid
+- **Images**: Next/Image with lazy loading
 
-## 💰 Monetização
+## 💰 Monetization
 
-### Links de Afiliados
-- Tracking automático de cliques
-- Suporte para múltiplas redes (Amazon Associates, etc.)
-- Analytics de conversão
-- Comissões por venda
+### Affiliate Links
+- Automatic click tracking
+- Support for multiple networks (Amazon Associates, etc.)
+- Conversion analytics
+- Commission per sale
 
-### Métricas Importantes
+### Important Metrics
 - CTR (Click Through Rate)
 - Conversion Rate
 - Revenue per Look
@@ -145,21 +157,21 @@ Tracking de cliques em links de afiliados:
 ## 🚀 Deploy
 
 ```bash
-# Build para produção
+# Build for production
 npm run build
 
-# Iniciar servidor de produção
+# Start production server
 npm start
 ```
 
-### Plataformas Recomendadas
-- **Vercel** (recomendado para Next.js)
+### Recommended Platforms
+- **Vercel** (recommended for Next.js)
 - **Netlify**
 - **AWS Amplify**
 
-## 📄 Licença
+## 📄 License
 
-MIT License - veja o arquivo LICENSE para detalhes.
+MIT License - see LICENSE file for details.
 
 ---
 

@@ -27,7 +27,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-4 py-8">
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-neutral-900 mb-2">Outfit da Tha a mais gata de Santos ❤️</h2>
+          <h2 className="text-2xl font-bold text-neutral-900 mb-2">Look of the Day</h2>
           <p className="text-neutral-600 font-medium">No-nonsense style. Ready in 5 minutes.</p>
         </div>
 
